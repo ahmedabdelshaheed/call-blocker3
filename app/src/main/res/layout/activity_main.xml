@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F0F4F8">
+
+    <!-- الهيدر -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1E3A5F"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛡️ Call Blocker"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✅ التطبيق شغّال"
+            android:textColor="#4CAF50"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- تفعيل / إيقاف -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="تفعيل الحجب"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1E3A5F" />
+
+        <Switch
+            android:id="@+id/switchEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" />
+    </LinearLayout>
+
+    <!-- إضافة رقم استثناء -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📋 أرقام الاستثناء (هيعدي عليهم)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1E3A5F"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="رقم الموبايل..."
+            android:inputType="phone"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="إضافة +"
+            android:backgroundTint="#1E3A5F"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(اضغط طويل على الرقم لحذفه)"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="8dp" />
+
+    <!-- قائمة الأرقام -->
+    <ListView
+        android:id="@+id/lvWhitelist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:padding="8dp" />
+
+    <!-- ملاحظة -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚠️ تأكد من إعطاء كل الصلاحيات المطلوبة\nالتطبيق بيشتغل في الخلفية حتى بعد الريستارت"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
